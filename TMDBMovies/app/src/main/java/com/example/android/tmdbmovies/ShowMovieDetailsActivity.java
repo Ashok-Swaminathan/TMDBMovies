@@ -10,9 +10,11 @@ import com.squareup.picasso.Picasso;
 
 public class ShowMovieDetailsActivity extends AppCompatActivity {
 
-    final String POSTER_URL_BASE = "https://image.tmdb.org/t/p/w500/";
+    final String POSTER_URL_BASE;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+	POSTER_URL_BASE = getResources().getString(R.string.image_url_base);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_movie_details);
         showDetails();
